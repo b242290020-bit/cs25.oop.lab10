@@ -10,10 +10,24 @@ class Product {
 		this.name = name;
 		this.price = price;
 		this.category = category;
-	}
+	} 
+	public String getName() {
+		return name;
 	// Хэрэгжүүл: getters, toString
 }
+public double getPrice() {
+	return price;
+}
+	public String getCategory() {
+        return category;
+    }
 
+    // ✔ toString
+    @Override
+    public String toString() {
+        return name + " (" + (int)price + ")";
+    }
+}
 public class ProductAnalyzer {
 	public static Map<String, List<Product>> analyze(List<Product> products) {
 		// Хэрэгжүүл: stream ашиглан category-гаар бүлэглэ, 1000₮-с дээш, price-аар

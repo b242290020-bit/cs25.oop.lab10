@@ -31,7 +31,9 @@ public class Zoo<T extends Animal> {
 
 	// Хэрэгжүүл: transferAnimals
 	public void transferAnimals(List<? extends T> source, List<? super T> destination) {
-		// Бүх амьтдыг source-оос destination руу шилжүүл
+		for (T animal : source) {
+			destination.add(animal);
+		}
 	}
 
 	public List<T> getAnimals() {

@@ -37,4 +37,9 @@ public class Zoo<T extends Animal> {
 	public List<T> getAnimals() {
 		return animals;
 	}
+} 
+public void transferAnimals(List<? extends T> source, List<? super T> destination) {
+    for (T animal : source) {
+        destination.add(animal);
+    }
 }
